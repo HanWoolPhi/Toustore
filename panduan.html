@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Penjualan dan Pembelian - TouStore</title>
+    <link rel="stylesheet" href="panduan.css">
+    <style>
+        /* Tambahkan script untuk toggle menu */
+        .menu-btn {
+            display: none; /* Awalnya tersembunyi */
+        }
+        
+        @media (max-width: 600px) {
+            .menu-btn {
+                display: block; /* Tampilkan tombol pada mobile */
+                position: absolute;
+                top: 50%;
+                right: 1rem;
+                transform: translateY(-50%);
+                z-index: 1000;
+            }
+
+            nav ul {
+                display: none; /* Sembunyikan menu pada mobile */
+                position: absolute;
+                top: 80px; /* Atur posisi dropdown agar di bawah header */
+                right: 0;
+                background: rgba(0, 0, 0, 0.9);
+                list-style: none;
+                padding: 1rem;
+                border-radius: 8px;
+            }
+
+            nav ul.show {
+                display: block; /* Tampilkan menu saat toggle aktif */
+            }
+
+            nav li {
+                margin: 0.5em 0;
+            }
+
+            nav a {
+                color: #ffffff;
+                font-size: 1.2em;
+            }
+        }
+
+        /* Mengembalikan menu pada desktop */
+        @media (min-width: 601px) {
+            nav ul {
+                display: flex;
+                justify-content: center;
+            }
+
+            .menu-btn {
+                display: none; /* Sembunyikan tombol pada desktop */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="accountgames.html">Account Games</a></li>
+                <li><a href="https://linktr.ee/TouStore">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="panduan">
+            <h1>Panduan Penjualan Produk</h1>
+            <div class="content-box">
+                <h2>Langkah-langkah Menjual Produk</h2>
+                <ol>
+                    <li>Silahkan hubungi admin yang tersedia pada contact.</li>
+                    <li>Kirim foto dan deskripsi produk.</li>
+                    <li>Admin Tou Store akan melakukan proses memposting produk anda.</li>
+                    <li>Waktu memposting produk memakan waktu selama kurang lebih sehari.</li>
+                </ol>
+            </div>
+
+            <h1>Panduan Pembelian Produk</h1>
+            <div class="content-box">
+                <h2>Langkah-langkah Membeli Produk</h2>
+                <ol>
+                    <li>Pembeli menghubungi Whatsapp / Instagram Penjual Untuk Menanyakan Ketersediaan Akun. (info contact cek deskripsi).</li>
+                    <li>Silahkan Melakukan Negosiasi Sampai Kedua Pihak Sepakat.</li>
+                    <li>Jika Sudah Sepakat Silahkan Chat Ke Admin Rekber Untuk Melakukan Rekber.</li>
+                    <li>Isi detail pengiriman dan pembayaran.</li>
+                    <li>Ikuti Tahapan Yang Diberikan Oleh Admin Rekber Sampai Selesai.</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 ToU Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.querySelector('nav ul');
+            navMenu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

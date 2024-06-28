@@ -1,0 +1,297 @@
+/* CSS untuk layout dan style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #050e18;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* CSS for Logo and Title */
+.logo {
+    width: 70px; /* Atur lebar logo sesuai kebutuhan */
+    height: auto; /* Biarkan tinggi menyesuaikan proporsi */
+    border-radius: 5px; /* Sudut logo yang bulat */
+    display: block;
+    margin: 0 auto; /* Center logo horizontally */
+}
+
+.header-content {
+    display: flex; /* Membuat konten header menjadi flex container */
+    align-items: center; /* Memusatkan secara vertikal ke tengah */
+    justify-content: space-between; /* Spasi antar elemen */
+    padding: 0 10px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.search-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px; /* Add some gap between input and button */
+}
+
+/* Header styling */
+header.header {
+    background: url('asset/image/GameCategories/efootball.png') no-repeat center center; /* Masukkan gambar background */
+    background-size: cover;
+    padding: 20px 0;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 130px; /* Tinggi header untuk memberikan ruang bagi gambar */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    gap: 10px; /* Add some gap between buttons */
+}
+
+.home-button {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparansi background untuk teks yang dapat dibaca */
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.search-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-container input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+}
+
+.game-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.game-link:hover .game-item {
+    transform: scale(1.02);
+}
+
+.game-link:hover {
+    text-decoration: none;
+}
+
+
+/* CSS untuk link produk game */
+.game-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: inherit; /* Warna teks tetap sesuai dengan induknya */
+}
+
+.game-link:hover .game-item {
+    transform: scale(1.02); /* Menambahkan efek hover */
+}
+
+.game-link:hover {
+    text-decoration: none; /* Menghilangkan garis bawah saat dihover */
+}
+
+/* Gaya untuk tombol menu hamburger */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Gaya untuk dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 70px; /* Adjust based on your header height */
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Transparansi untuk kesan lebih ringan */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.dropdown-item {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(51, 51, 51, 0.7);
+}
+
+.main {
+    margin-top: 20px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding-bottom: 80px; /* Sesuaikan dengan tinggi footer */
+}
+.game-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+}
+
+.game-item {
+    background-image: url('asset/image/GameCategories/efootball/efootball.png');
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.game-item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.game-details {
+    flex-grow: 1; /* Memungkinkan elemen ini untuk memanjang */
+}
+
+.game-details h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.game-details p {
+    color: #666;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .home-button {
+        display: none; /* Sembunyikan tombol pada layar kecil */
+    }
+
+    .menu-toggle {
+        display: inline-block; /* Tampilkan tombol menu hamburger */
+    }
+
+    .search-container {
+        justify-content: flex-end; /* Posisikan elemen di sebelah kanan */
+    }
+
+    .dropdown-menu {
+        width: 100%; /* Full width untuk tampilan mobile */
+        top: 100%;
+        right: 0;
+    }
+
+    .header-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .logo-container {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    header .header-content {
+        flex-direction: row; /* Susun item secara horizontal */
+        align-items: center; /* Pusatkan item secara vertikal */
+        justify-content: space-between; /* Spasi antar elemen */
+        text-align: left; /* Teks rata kiri */
+    }
+
+    header .container {
+        flex-direction: row; /* Susun item secara horizontal */
+        justify-content: space-between; /* Spasi antar elemen */
+        align-items: center; /* Pusatkan item secara vertikal */
+    }
+
+    header {
+        height: auto; /* Auto height untuk mengakomodasi konten */
+    }
+
+    .search-container input {
+        max-width: 200px; /* Sesuaikan lebar input */
+    }
+    .main-content {
+        padding-bottom: 100px; /* Menambahkan lebih banyak ruang untuk layar kecil */
+    }
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    height: 80px; /* Pastikan tinggi sesuai */
+}

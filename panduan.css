@@ -1,0 +1,109 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('asset/image/panduan/background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    background-color: #050e18;
+}
+
+/* Header styles */
+header {
+    background: black;
+    padding: 2em 1em; /* Tambahkan padding agar header lebih besar */
+    text-align: center;
+    position: relative;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px; /* Sesuaikan padding agar lebih pas */
+    position: absolute;
+    top: 50%; /* Posisikan di tengah secara vertikal */
+    right: 1rem; /* Posisikan di kanan */
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: none; /* Awalnya tersembunyi */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #333;
+}
+
+/* Main content styles */
+main {
+    flex: 1;
+    padding: 2em;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 1em auto;
+    max-width: 800px;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.content-box {
+    background: #fff;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-box h2 {
+    margin-top: 0;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 0.5em 0;
+    }
+
+    nav a {
+        color: #ffffff;
+    }
+}
